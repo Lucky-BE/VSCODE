@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<div>
+    <div id="yellow">
+        <h1>설문지</h1>
+        <p>사고 싶은 핸드폰 종류</p>
+    </div>
+        <hr>
+    <div id="lightblue">
+        <div>
+            갖고있는 폰 종류 
+            <input type="radio" value="아이폰" name="phone">아이폰
+            <input type="radio" value="삼성" name="phone">삼성
+            <input type="radio" value="LG" name="phone">LG
+            <input type="radio" value="그 외" name="phone">그 외
+        </div>
+        <div>
+            성별
+            <input type="radio" value="M" name="gender">남
+            <input type="radio" value="F" name="gender">여
+        </div>
+        <div>
+            구매 시기 
+            <select name="purchase" id="pur">
+                <option value="2017~2020">2017~2020</option>
+                <option value="~2013~2016">~2013~2016</option>
+            </select>
+        </div>
+        <div style="margin-top: 50px;">
+            통신사
+            <input type="checkbox" name="chec" value="SKT">SKT
+            <input type="checkbox" name="chec" value="KT">KT
+            <input type="checkbox" name="chec" value="LG">LG
+            <input type="checkbox" name="chec" value="그 외">그 외
+        </div>
+        <div>
+            남기고 싶은 말
+            <textarea cols="20" rows="2"></textarea>
+        </div>
+        <div>
+            <button onclick="res()">클릭</button>
+            <button onclick="co()">색변경</button>
+        </div>
+    </div>
+    <script>
+        function co(){
+            document.getElementById("yellow").style.backgroundColor="yellow";
+            document.getElementById("lightblue").style.backgroundColor="lightblue";
+        }
+
+        function res(){
+            var p = document.getElementsByName("phone");
+            var pin="";
+            for(i in p){
+                if(p[i].checked){
+                    var pin=p[i].value;
+                }
+            }
+            var g = document.getElementsByName("gender");
+            var gin="";
+            for(i in g){
+                if(g[i].checked){
+                    var gin=g[i].value;
+                }
+            }
+            var pur = document.getElementById("pur");
+            var purin = pur.value;
+            var c = document.getElementsByName("chec");
+            var cin="";
+            for(i in c){
+                if(c[i].checked){
+                    var cin=c[i].value;
+                }
+            }
+            alert("폰 종류 : " + pin + "\n" +
+                    "성별 : " + gin + "\n" +
+                    "구매 시기 : " + purin + "\n" +
+                    "통신사 : " + cin);
+        }
+    </script>
+</body>
+</html>

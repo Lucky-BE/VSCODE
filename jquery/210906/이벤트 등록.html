@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+    .re{
+        background-color:black;
+        color :white;
+    }
+</style>
+<!-- 제이쿼리 라이브러리 연동 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $("h1").on("click",function(){
+            $(this).html(function(m,n){
+                return n + "+" ;
+            });
+        });
+
+        $("h1").on({
+            mouseenter:function(){
+                $(this).addClass("re");
+            },mouseleave:function(){
+                $(this).removeClass("re");
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <h1>one</h1>
+    <h1>two</h1>
+    <h1>three</h1>
+</body>
+</html>

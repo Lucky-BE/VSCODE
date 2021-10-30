@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+    #a{
+        border:1px solid black;
+        background-color: navy;
+        margin-top: 10px;
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+</style>
+<!-- 제이쿼리 라이브러리 연동 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script>
+    function size(){
+        $("#a").animate({
+            width:400,
+            height:400
+        },'slow');
+    }
+    function po(){
+        $("#a").animate({
+            left:100,
+            top:100
+        },'slow');
+    }
+    function op(){
+        $("#a").animate({
+            opacity:0
+        },'slow');
+    }
+    function co(){
+        $("#a").animate({
+            backgroundColor:'yellow'
+        },'slow');
+    }
+    function setTotal(){
+        $("#a").animate({
+            width:400,
+            height:400,
+            opacity:1,
+            left:100,
+            top:100,
+            backgroundColor:'yellow'
+        },'slow');
+    }
+</script>
+</head>
+<body>
+    <button onclick="size()">크기 설정</button>
+    <button onclick="po()">위치 설정</button>
+    <button onclick="op()">투명도 설정</button>
+    <button onclick="co()">배경색 설정</button>
+    <button onclick="setTotal()">종합 설정</button>
+    <div id="a"></div>
+</body>
+</html>

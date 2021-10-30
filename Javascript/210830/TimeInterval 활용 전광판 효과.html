@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script>
+    </script>
+</head>
+<body>
+    <div id="aa">자바스크립트 넘나 재밌는 것 </div>
+    <script>
+        var n=document.getElementById("aa");
+        var t=setInterval("on()",500);
+
+        n.onclick=function(e){
+            e.clearInterval(t);
+            //타이머 해제
+        }
+        function on(){
+            var a=n.innerHTML;
+            var b=a.substr(0,1);
+            var c=a.substr(1,a.length-1);
+            a=c+b;
+            n.innerHTML=a;
+        }
+    </script>
+</body>
+</html>

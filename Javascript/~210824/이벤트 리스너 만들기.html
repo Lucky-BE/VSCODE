@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 4번 익명 함수
+        var n;
+        function begin(){
+            n=document.getElementById("a");
+            n.onmouseover=function(){
+                this.style.backgroundColor="pink";
+            }        
+        }
+
+        // 3번 DOM 객체의 addEventListener() 메소드 활용
+        /*var n;
+        function begin(){
+            n=document.getElementById("a");
+            n.addEventListener("mouseover",pink);
+        }
+        function pink(){
+            n.style.backgroundColor="pink";
+        }*/
+
+        // 2번 DOM 객체의 이벤트 리스너 프로퍼티에 작성
+        /*var n
+        function begin(){
+            n=document.getElementById("a");
+            n.onmouseover=pink;
+        }
+        function pink(){
+            n.style.backgroundColor="pink";
+        }*/
+    </script>
+</head>
+<body onload="begin()">
+    <p id="a">마우스를 올려봐~~</p>
+
+    <!-- 1번 태그 내에 이벤트 리스너 작성 -->
+    <!-- <p onmouseover="this.style.fontSize='50px'">글자 50픽셀</p>
+    <p onclick="this.style.backgroundColor='red'">배경빨간색</p> -->
+    <script>
+    </script>
+</body>
+</html>

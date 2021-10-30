@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <style></style>
+        <!-- 제이쿼리 라이브러리 연동 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $("#btn").on("click", function () {
+                    $("li").add("p").css("border", "2px solid green");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li>첫 번째 아이템</li>
+            <li>두 번째 아이템</li>
+            <li>세 번째 아이템</li>
+        </ul>
+        <p>첫 번째 단락이에요!</p>
+        <button id="btn">p요소를 추가</button>
+    </body>
+</html>

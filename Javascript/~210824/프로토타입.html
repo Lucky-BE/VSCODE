@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function mon(name,id,n){
+            this.name=name;
+            this.id=id;
+            this.n=n;
+
+            this.a=function(){
+                return this.n;
+            }
+            this.plus=function(money){
+                this.n+=money;
+            }
+            this.minus=function(money){
+                this.n-=money;
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var aa=new mon("찬우","123",30000); //생성자
+        document.write(aa.name+"<br>");
+
+        aa.plus(1000);
+        document.write(aa.a()+"<br>");
+        
+        aa.minus(5000);
+        document.write(aa.a()+"<br>");
+    </script>
+</body>
+</html>

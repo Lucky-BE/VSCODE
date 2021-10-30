@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+    
+</style>
+<!-- 제이쿼리 라이브러리 연동 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var ary=[{name:'현빈',addr:'서울'},{name:'선웅',addr:'서울'},{name:'건우',addr:'서울'}];
+        $.each(ary,function(index,item){
+            var r="";
+            r+="<a href=''+item.link+''>";
+            r+="<h1>"+item.name+"</h1>";
+            r+="</a>";
+
+            document.body.innerHTML+=r;
+
+        });
+        $(ary).each(function(i,o){
+            console.log(i+":", o);
+        });
+    });
+</script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function ch(){
+            var n=null;
+            var m=document.getElementsByName("com");
+            for(var i=0; i<m.length; i++){
+                if(m[i].checked==true){
+                    n=m[i];
+                }
+            }
+            if(n!=null){
+                alert(n.value);
+            }
+            else{
+                alert("선택안함");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="radio" name="com" value="java">자바
+    <input type="radio" name="com" value="db">디비
+    <input type="radio" name="com" value="css">css
+    <input type="button" value="check" onclick="ch()">
+    <script>
+        
+    </script> 
+    </body>
+    </html>

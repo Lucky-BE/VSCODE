@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <style>
+            /*  p {
+                text-decoration: line-through;
+            } */
+        </style>
+        <!-- 제이쿼리 라이브러리 연동 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $("#btn1").on("click", function () {
+                    $("p").first().css("color", "lightgray");
+                    $("p").first().css("text-decoration", "line-through");
+                    $("p").last().css("color", "lightgray");
+                    $("p").last().css("text-decoration", "line-through");
+                });
+                $("#btn2").on("click", function () {
+                    $("p").first().css("color", "black");
+                    $("p").first().css("text-decoration", "none");
+                    $("p").last().css("color", "black");
+                    $("p").last().css("text-decoration", "none");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p>이 단락에 클래스를 추가</p>
+        <p>이 단락에는 클래스를 추가하지 않아</p>
+        <p>이 단락에 클래스를 추가</p>
+        <button id="btn1">클래스 추가</button> <button id="btn2">클래스 제거</button>
+    </body>
+</html>

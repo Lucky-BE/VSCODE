@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function gugu(n){
+            var n=parseInt(n);
+            
+            if(isNaN(n)){
+                alert("숫자가 아님")
+            }
+            for(i=1;i<=9;i++){
+            document.write(n+" X "+i+" = "+(n*i)+"<br>");
+            
+       }
+        }
+    </script>
+</head>
+<body>
+    <script>
+       var n=prompt("몇 단?","");
+       gugu(n);// 함수 호출
+    </script>
+</body>
+</html>

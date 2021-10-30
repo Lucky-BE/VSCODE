@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script>
+        function ch(){
+            var n=document.getElementById("aa");
+            var m=document.getElementById("ss");
+            m.onload=function(){
+                var z=document.getElementById("dd");
+                z.innerHTML=m.width+" "+m.height;
+            }
+            var i=n.selectedIndex;
+            m.src=n.options[i].value;
+        }
+    </script>
+</head>
+<body onload="ch()">
+    <form>
+        <select id="aa" onchange="ch()">
+            <option value="C:\Users\User\Documents\VSCODE\img\치킨.jpg">치킨</option>
+            <option value="C:\Users\User\Documents\VSCODE\img\라면.jpg">라면</option>
+        </select>
+        <div id="dd">이미지 폭, 높이</div>
+    </form>
+
+    <p><img id="ss" src="C:\Users\User\Documents\VSCODE\img\치킨.jpg"></p>
+
+
+    <script>
+    </script>
+</body>
+</html>

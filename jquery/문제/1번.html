@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <style>
+            body * {
+                border: 1px solid black;
+                margin: 20px;
+                padding: 10px;
+            }
+            li {
+                list-style-type: none;
+            }
+        </style>
+        <!-- 제이쿼리 라이브러리 연동 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            function change() {
+                $("#ps").parent().css("border-color", "red");
+                $("#ps").parent().css("border-width", "2px");
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            div 요소
+            <ul>
+                ul 요소
+                <li>li 1</li>
+                <li>
+                    li 2
+                    <p id="ps" style="padding-bottom: 30px">
+                        p요소(기준)<br /><br />
+                        <span>span 요소</span>
+                    </p>
+                </li>
+                <li>li 3</li>
+            </ul>
+        </div>
+        <button onclick="change()">click me</button>
+    </body>
+</html>

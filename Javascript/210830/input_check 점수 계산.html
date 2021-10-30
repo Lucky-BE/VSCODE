@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        var sum=0;
+        function score(obj){
+            if(obj.checked){
+                sum+=parseInt(obj.value);
+            }
+            else{
+                sum-=parseInt(obj.value);
+            }
+            document.getElementById("tot").value=sum;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label><input type="checkbox" name="ch" value="80" onclick="score(this)">자바 80점</label>
+        <label><input type="checkbox" name="ch" value="50" onclick="score(this)">HTML 50점</label>
+        <label><input type="checkbox" name="ch" value="90" onclick="score(this)">CSS 90점</label>
+        <input type="text" id="tot" value="0">
+    </form>
+</body>
+</html>

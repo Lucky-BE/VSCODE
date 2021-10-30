@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function on(){
+            var n=document.getElementById("aa");
+            var m=document.getElementById("bb");
+            var b=n.selectedIndex;
+            m.src=n.options[b].value;
+
+
+        }
+    </script>
+</head>
+<body onload="on()">
+    <select  id="aa" onchange="on()">
+        <option value="C:\Users\User\Documents\VSCODE\img\라면.jpg">라면</option>
+        <option value="C:\Users\User\Documents\VSCODE\img\치킨.jpg">치킨</option>
+    </select>
+
+    <span id="span">배고파!</span>
+    <p><img id="bb" src=""></p>
+</body>
+</html>

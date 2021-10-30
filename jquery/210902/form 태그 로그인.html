@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <!-- 제이쿼리 라이브러리 연동 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script>
+        $(function(){
+            $("input[type=text],input[type=password]").css("width","500px");
+            $("input[type=button]").css("margin-top","20px").css("width","200px").css("height","100px");
+        });
+        $(function(){
+            $("#login").css("background-color", "pink");
+            $("#login").hover(function(){
+                $(this).css("background-color", "tomato");
+            }, function(){
+                $(this).css("background-color", "pink");
+            });
+        });
+
+        function log(){
+            var id=document.getElementById("id").value;
+            var pw=document.getElementById("pw").value;
+            if(id=="java" && pw=="123"){
+                alert("로그인");
+            }
+            else{
+                alert("다시입력");
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>로그인</h1>
+    <h2>아이디</h2>
+    <input id="id" type="text" placeholder="아이디를 입력해주세요">
+    <h2>패스워드</h2>
+    <input id="pw" type="password" placeholder="비밀번호를 입력해주세요">
+    <div>
+        <input id="login" type="button" value="로그인" onclick="log()">
+    </div>
+
+</body>
+</html>

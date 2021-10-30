@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function on(){
+            var n=document.getElementById("a");
+            result=document.createElement("span");
+            node=document.createTextNode("="+eval(1+2+3));
+            result.appendChild(node);
+            n.appendChild(result);
+        }
+    </script>
+</head>
+<body>
+    <p id="a">1+2+3</p>
+    <input type="button" value="클릭" onclick="on()">
+    <script>
+    </script>
+</body>
+</html>

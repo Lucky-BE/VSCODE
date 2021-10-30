@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <style></style>
+        <!-- 제이쿼리 라이브러리 연동 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $("#btn").on("click", function () {
+                    $("ul").find("li").eq(1).html("two 선택!!");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <button id="btn">텍스트 변경</button>
+    </body>
+</html>

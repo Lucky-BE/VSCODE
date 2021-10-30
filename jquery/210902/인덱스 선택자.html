@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <!-- 제이쿼리 라이브러리 연동 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script>
+        $(function(){
+            $("p:eq(0)").css("background-color","yellow");
+            $("p:nth-child(1)").css("color","blue");
+            $("p:nth-of-type(1)").css("font-style","italic");
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p>div 안 p태그</p>
+        <p>div 안 p태그</p>
+        <p>div 안 p태그</p>
+    </div>
+​
+    <div>
+        <p>div 안 p태그</p>
+        <p>div 안 p태그</p>
+        <p>div 안 p태그</p>
+    </div>
+​
+    <div>
+        <div>div 안 div태그</div>
+        <p>div 안 p태그</p>
+        <p>div 안 p태그</p>
+    </div>
+
+</body>
+</html>

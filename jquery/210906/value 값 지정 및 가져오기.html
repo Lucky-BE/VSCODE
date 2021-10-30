@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document</title>
+<!-- 제이쿼리 라이브러리 연동 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function on(){
+        var n=$("#a1").val();
+        alert(n);
+    }
+    function on2(){
+        $("#a1").val("최선웅");
+    }
+</script>
+</head>
+<body>
+    <input type="text" id="a1">
+    <button onclick="on()">value가져오기</button>
+    <button onclick="on2()">value세팅</button>
+</body>
+</html>

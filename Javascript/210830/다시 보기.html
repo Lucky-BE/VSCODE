@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var w=1;
+        function down(n){
+            n.style.fontSize="50px";
+        }
+        function up(n){
+            n.style.fontSize="20px"
+        }
+        function over(n){
+            n.style.backgroundColor="yellowgreen";
+        }
+        function out(n){
+            n.style.backgroundColor="orchid";
+        }
+        function wheel(e,n){
+            if(e.wheelDelta<0){
+                w--;
+                if(w<0){
+                    w=0;
+                }
+            }
+            else{
+                w++;
+            }
+            n.style.borderStyle="solid";
+            n.style.borderWidth=w+"px";
+        }
+    </script>
+</head>
+<body>
+    <span onmousedown="down(this)" 
+        onmouseup="up(this)" 
+        onmousewheel="wheel(event,this)"
+        onmouseover="over(this)" 
+        onmouseout="out(this)">이벤트</span>
+    <script>
+    </script> 
+</body>
+</html>

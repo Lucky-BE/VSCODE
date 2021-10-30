@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+    .re{
+        background-color:black;
+        color :white;
+    }
+</style>
+<!-- 제이쿼리 라이브러리 연동 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        // 방법 1
+        /* $("h2").filter(":even").css({
+            backgroundColor:'black',
+            color:'yellow'
+        }); */
+        // 방법 2
+        /* $('h2').filter(function(index){
+            return index%2==0;
+        }).css({
+            backgroundColor:'black',color:'yellow'
+        }); */
+        // 방법 3
+        $('h2').css('background-color','black').filter(':even').css('color','yellow');
+
+    });
+</script>
+</head>
+<body>
+    <h2>은겸</h2>
+    <h2>건우</h2>
+    <h2>영기</h2>
+</body>
+</html>

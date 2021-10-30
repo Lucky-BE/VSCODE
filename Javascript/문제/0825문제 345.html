@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    </script>
+</head>
+<body>
+    자신이 하는 일을 <span id="str">좋아하게</span> 되는 것
+    <p><button onclick="ch()">변경</button></p>
+    <script>
+        //3
+        var a=prompt("문자 입력 (, 로 구분)");
+        a=a.split(",");
+        for(var i in a){
+            document.write(a[i]+"<br>");
+        }
+
+        //4
+        var day=new Date();
+        document.write(day.toLocaleDateString()+" "+day.toLocaleTimeString()+"<br>");
+        //4-1
+        document.write(day.getFullYear()+"<br>");
+        document.write(day.getMonth()+1+"<br>");
+        document.write(day.getDate()+"<br>");
+
+        //5
+        function ch(){
+            var get=document.getElementById("str");
+            get.style.color="violet";
+            get.style.width="4em";
+            get.style.display="block";
+        }
+    </script>
+</body>
+</html>

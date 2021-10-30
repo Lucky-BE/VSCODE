@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    </style>
+</head>
+<body>
+    <p id="one" style="color:blue" onclick="this.style.color='red'">자바스크립트</p>
+
+    <script>
+        var n=document.getElementById("one");
+        n.innerHTML="CSS";
+        
+        var t=n.style.color;
+        document.write(t);
+
+        
+        
+
+        
+        
+        /*var n=[];
+        for(var i=0;i<5;i++){
+            n[i]=parseInt(Math.random()*5+1);//난수 발생
+            document.writeln(n[i])
+        }*/
+
+        //for in
+        /*var arr=[36,"자바",true];
+        for(i in arr){
+            document.writeln(arr[i]);
+        }
+
+        var box={
+            color:"red",
+            size:20,
+            fill:function(){
+                this.size+=20;
+            },
+            minus:function(){
+                this.size-=20;
+            }
+        }
+
+        box.fill();
+        document.write(box.size+"<br>");
+        box.minus();
+        document.write(box.size);*/
+
+
+        /*var tv=new Object();
+        tv.color="black";
+        tv.info=function(){
+            document.write(tv.color);
+        }
+
+        var tv={
+            color:"black",
+            info=function(){
+                document.write(tv.color);
+            }
+        }
+
+        tv.info();*/
+
+        
+
+
+
+
+        //5행 5열 표를 만들어 1~25까지 출력되는 프로그램
+
+        /*var n=1;
+        document.write("<table border='1px'>");
+        for(var i=0; i<5; i++){
+            document.write("<tr>");
+            for(var j=1; j<=5; j++){
+                document.write("<td>"+n+"</td>");
+                n++;
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");*/
+        
+        
+        
+        
+        //1~20까지 출력 짝수만 출력
+        /*var x=1;
+        while(x<=20){
+            if(x%2==0){
+                document.writeln("<p id='a'>" + x);
+            }
+            x++;
+            
+        }*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script>
+        function on(obj){
+            var m=document.getElementById("menuimg");
+            if(obj.checked){
+                m.src=obj.value;
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 1번 -->
+    <span id="span">색 이벤트</span>
+
+    <!-- 2번 -->
+    <form>
+        <input onclick="on(this)" type="radio" name="menu" value="C:\Users\User\Documents\VSCODE\img\짜장면.jpg">짜장면
+        <input onclick="on(this)" type="radio" name="menu" value="C:\Users\User\Documents\VSCODE\img\치킨.jpg">치킨
+        <input onclick="on(this)" type="radio" name="menu" value="C:\Users\User\Documents\VSCODE\img\라면.jpg">라면
+
+        <div><img src="" id="menuimg"></div>
+        
+    </form>
+    <script>
+        var n=document.getElementById("span");
+        n.ondblclick=function(){
+            n.style.backgroundColor="pink";
+        }
+        n.onmouseout=function(){
+            n.style.backgroundColor="blue";
+        }
+    </script>
+</body>
+</html>

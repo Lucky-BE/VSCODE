@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+    div{
+        border: 2px solid black;
+        padding: 20px;
+    }
+</style>
+<!-- 제이쿼리 라이브러리 연동 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $("#a").parent().css('border-color','red');
+        $("#a").parents().css('border-width','5px');
+        $("#a").parents('.a1').css('border-style','dotted');
+    })
+</script>
+</head>
+<body>
+    <div>
+        div one
+        <div class="a1">
+            div two
+            <div>
+                div three
+                <div id="a">
+                    div four
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

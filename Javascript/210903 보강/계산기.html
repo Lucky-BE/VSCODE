@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        input{
+            border-radius: 5px;
+        }
+        
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <input type="text" value="0" id="dis" />
+    <table>
+        <tr>
+            <td><button onclick="clearf()">C</button></td>
+            <td><button onclick="re()">=</button></td></tr>
+            <tr><td><button name="num" value="7" >7</button></td>
+            <td><button name="num" value="8">8</button></td>
+            <td><button name="num" value="9">9</button></td>
+            <td><button name="op" value="/">/</button></td>
+        </tr>
+        
+        <tr>
+            <td><button name="num" value="4">4</button></td>
+            <td><button name="num" value="5">5</button></td>
+            <td><button name="num" value="6">6</button></td>
+            <td><button name="op" value="*">*</button></td>
+        </tr>
+        
+        <tr>
+            <td><button name="num" value="1">1</button></td>
+            <td><button name="num" value="2">2</button></td>
+            <td><button name="num" value="3">3</button></td>
+            <td><button name="op" value="-">-</button></td>
+        </tr>
+        
+        <tr>
+            <td><button name="num" value="0">0</button></td>
+            <td><button name="op"value="+">+</button></td>
+            <td><span id="opp"></span></td>
+        </tr>
+    </table>
+    <script>
+        var n=document.getElementsByName("num");
+        var o=document.getElementsByName("op");
+        var p=document.getElementById("opp");
+        var disp=document.getElementById("dis");
+        var su="";
+        var temp="";
+
+        for(var i=0;i<n.length;i++){
+            n[i].addEventListener('click',function(){ //숫자 클릭했을 때
+                disp.value=""; // 숫자 클릭시 0 삭제
+                var c=this.value; // 숫자의 값을 c에 저장
+                temp+=c; // 임시로 템프에 저장
+                su+=c // 눈에 보여지는 값
+                disp.value=su;
+            });
+        }
+        for(var i=0;i<o.length;i++){
+            o[i].addEventListener("click",function(){
+            var c=this.innerHTML;
+            p.innerHTML=c;
+            su+=c; // 저장된 값에 연산자를 추가해줌
+            temp=su; // 템프에 그대로 저장
+            su=""; // 연산자 입력 후 값을 초기화
+            });
+        }
+        function clearf(){
+            disp.value=0;
+            su="";
+            temp="";
+        }
+        function re(){
+            disp.value=eval(temp);
+            su=eval(temp);
+        }
+        
+    </script>
+</body>
+</html>

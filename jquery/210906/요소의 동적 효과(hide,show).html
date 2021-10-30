@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+    #a1{
+        border:1px solid black;
+        background-color: wheat;
+        margin-top: 10px;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<!-- 제이쿼리 라이브러리 연동 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function on(){
+        $('#a1').hide('slow'); // 요소 시작점으로 사라지면서 숨김 함수
+    }
+    function on1(){
+        $('#a1').show('slow'); // 숨겨진 요소를 시작점에서 보이게 하는 함수
+    }
+    function on2(){
+        $('#a1').toggle('slow'); // hide(), show() 를 스위칭 함
+    }
+    function on3(){
+        $('#a1').fadeIn('slow'); // 숨겨진 요소가 점점 보여지는 함수
+    }
+    function on4(){
+        $('#a1').fadeOut('slow'); // 요소가 점점 사라짐
+    }
+    function on5(){
+        $('#a1').fadeToggle('slow'); // fadeIn(), fadeOut() 을 스위칭 함
+    }
+    function on6(){
+        $('#a1').fadeTo('slow',0.4); // 지정한 투명도 만큼 투명해짐 0~1 
+    }
+    function on7(){
+        $('#a1').slideUp('slow'); // 요소를 위로 올려서 숨김 
+    }
+    function on8(){
+        $('#a1').slideDown('slow'); // 요소를 아래로 내려서 보임 
+    }
+    function on9(){
+        $('#a1').slideToggle('slow'); // slideUp(), slideDown() 을 스위칭 함
+    }
+</script>
+</head>
+<body>
+    <button onclick="on()">hide</button>
+    <button onclick="on1()">show</button>
+    <button onclick="on2()">toggle</button>
+    <button onclick="on3()">fadein</button>
+    <button onclick="on4()">fadeout</button>
+    <button onclick="on5()">fadetoggle</button>
+    <button onclick="on6()">fadeto</button>
+    <button onclick="on7()">slideup</button>
+    <button onclick="on8()">slidedown</button>
+    <button onclick="on9()">slidetoggle</button>
+
+    <div id="a1"></div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        /* function url(){
+            var n=document.getElementById("sel");
+            var i=n.selectedIndex;
+            window.open(n[i].value,"","width=500,height=600");
+        } */
+        function url(e){
+            var n=document.getElementsByTagName("option");
+            window.open(n[e].value,"","width=500,height=600");
+        }
+
+    </script>
+</head>
+<body>
+    <select id="sel" onchange="url(selectedIndex)">
+        <option value="https://www.naver.com">네이버</option>
+        <option value="https://www.daum.net">다음</option>
+        <option value="https://www.google.co.kr">구글</option>
+    </select>
+    <script>
+
+    </script>
+</body>
+</html>

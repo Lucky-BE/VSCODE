@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+</style>
+<!-- 제이쿼리 라이브러리 연동 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function on(){
+        $("#bb").remove();
+    }
+    function on1(){
+        $("#aa").empty();
+    }
+</script>
+</head>
+<body>
+    <div id="aa">
+        <p>태그</p>
+        <p id="bb">id가 bb</p>
+        <p>태그 p</p>
+    </div>
+    
+    <button onclick="on()">제거</button>
+    <button onclick="on1()">제거1</button>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function onA(){
+            var n=document.getElementById("a");
+            np=document.createElement("p");
+            np=document.createAttribute("id","p");
+            node=document.createTextNode("서버");
+            np.appendChild(node);
+            n.appendChild(np);
+        }
+        function onB(){
+            var n=document.getElementById("b");
+            np=document.createElement("p");
+            np=document.createAttribute("id","p");
+            node=document.createTextNode("짜장면");
+            np.appendChild(node);
+            n.appendChild(np);
+        }
+    </script>
+</head>
+<body>
+    <div id="a"><b>Q.컴퓨터 분야 뭐가 관심있니?</b><br>
+    </div>
+    <input type="button" onclick="onA()" value="답보기">
+    <div id="b"><b>Q.뭐 먹고싶니?</b><br>
+    </div>
+    <input type="button" onclick="onB()" value="답보기">
+    <script>
+    </script>
+</body>
+</html>

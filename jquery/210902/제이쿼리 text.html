@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document</title>
+<!-- 제이쿼리 라이브러리 연동 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script>
+    function on(){
+        var n=$("#a1").text(); //div 가 감싸고 있는 텍스트를 가져온다.
+        alert(n);
+    }
+
+    function on2(){
+        $("#a2").text("ㅜㅜ"); // 새 텍스트 생성
+    }
+</script>
+</head>
+<body>
+    <div id="a1">문자열a1</div>
+    <button onclick="on()">문자열 갖고오기</button>
+
+    <div id="a2">문자열a2</div>
+    <button onclick="on2()">문자열 바꾸기</button>
+</body>
+</html>

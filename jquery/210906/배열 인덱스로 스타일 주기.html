@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+    .aa0{
+        background-color: red;
+    }
+    .aa1{
+        background-color: orange;
+    }
+    .aa2{
+        background-color: yellow;
+    }
+</style>
+<!-- 제이쿼리 라이브러리 연동 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        var c=['green','blue','pink'];
+        // 방법 1
+        /* $('h1').each(function(i){
+            $(this).css('color',c[i]);
+        }); */
+        // 방법 2
+        /* $('h1').css('color',function(i){
+            return c[i];
+        }); */
+        // 방법 3
+        /* $('h1').css({
+            color:function(i){
+                return c[i];
+            }
+        }); */
+    });
+</script>
+</head>
+<body>
+    <h1>지현</h1>
+    <h1>영기</h1>
+    <h1>건우</h1>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <!-- 제이쿼리 라이브러리 연동 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#aa").css("color","blue");
+        });
+        $(document).ready(function(){
+            $(".bb").css("color","orange");
+            $("p.bb").css("background","yellow");
+        });
+        /* $(document).ready(function(){
+            $("body *").css("color","green");
+        }); */
+        $(function(){
+            $("#a").parent().css("border","1px dotted tomato");
+        });
+        $(function(){
+            $("#b li").css({
+                "background-color":"yellow",
+                "color":"red"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="b">
+        <ul>
+            <li id="a">one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+        </ul>
+    </div>
+
+    <h1 id="aa">제이쿼리</h1>
+    <p class="bb">안녕하세요</p>
+</body>
+</html>

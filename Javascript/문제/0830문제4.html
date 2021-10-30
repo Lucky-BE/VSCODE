@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cal</title>
+    <style>
+        input[type=button]{
+            width: 50px;
+            height: 30px;
+            margin: 10px 10px 0 0;
+        }
+        input[type=text]{
+            width: 300px;
+        }
+    </style>
+    <script>
+        function reset(){
+            var r=document.getElementById("result");
+            r.value="0";
+        }
+        function calc(){
+            var cal=document.getElementById("result");
+            cal.value=eval(cal.value);
+        }
+        function on(num){
+            var r=document.getElementById("result");
+            var v=r.value;
+            if(r.value==0){
+                r.value="";
+                r.value=r.value+num;
+            }
+            else{
+                r.value=r.value+num;
+            }
+        }
+        function del(){
+            var r=document.getElementById("result");
+            var re=r.value;
+            if(r.value==0){
+                r.value=0;
+            }else{
+                var de=re.slice(0,-1);
+                r.value=de;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h2>계산기</h2>
+    <hr>
+    <input type="text" id="result" value="0" readonly>
+    
+    <div>
+        <input onclick="reset()" type="button" value="C">
+        <input onclick="del()" type="button" value="del">
+        <input onclick="calc()" type="button" value="=">
+    </div>
+    <div>
+        <input onclick="on('7')" type="button" value="7">
+        <input onclick="on('8')" type="button" value="8">
+        <input onclick="on('9')" type="button" value="9">
+        <input onclick="on('/')" type="button" value="/">
+    </div>
+    <div>
+        <input onclick="on('4')" type="button" value="4">
+        <input onclick="on('5')" type="button" value="5">
+        <input onclick="on('6')" type="button" value="6">
+        <input onclick="on('*')" type="button" value="*">
+    </div>
+    <div>
+        <input onclick="on('1')" type="button" value="1">
+        <input onclick="on('2')" type="button" value="2">
+        <input onclick="on('3')" type="button" value="3">
+        <input onclick="on('-')" type="button" value="-">
+    </div>
+    <div>
+        <input onclick="on('0')" type="button" value="0">
+        <input onclick="on('+')" type="button" value="+">
+        <input onclick="on('.')" type="button" value=".">
+    </div>
+
+
+    <script>
+    </script>
+</body>
+</html>

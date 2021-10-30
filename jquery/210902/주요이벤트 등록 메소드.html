@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <!-- 제이쿼리 라이브러리 연동 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script>
+        $(function(){
+        $("#aa").click(function(){
+            $("#aa").css("background-color","yellow");
+            $("#aa").css("color","blue");
+        });
+        
+        $("#bb").dblclick(function(){
+            $("#bb").css("background-color","pink");
+            $("#bb").css("color","blue");
+        });
+        
+        $("#cc").hover(function(){
+            $("#cc").css("background-color","gray");
+            $("#cc").css("color","white");
+        },function(){
+        $("#cc").css("background-color","black");
+        $("#cc").css("color","white");
+        });
+
+        $("#dd").focus(function(){
+            $("#dd").css("background-color","green");
+            $("#dd").css("color","white");
+        });
+        
+        $("#dd").blur(function(){
+            $("#dd").css("background-color","black");
+            $("#dd").css("color","black");
+        });
+    });
+    </script>
+</head>
+<body>
+    <h3 id="aa">클릭</h3>
+    <h3 id="bb">더블클릭</h3>
+    <h3 id="cc">hover</h3>
+    <input id="dd" type="text" value="focus 일때만 보임" readonly>
+</body>
+</html>

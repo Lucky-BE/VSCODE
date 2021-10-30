@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <input id="dis" type="text" value=""><button onclick="calcu()">계산</button><br>
+    <input id="res" type="text" value="">
+    <script>
+        function calcu(){
+            var n = document.getElementById("dis").value;
+            var m = document.getElementById("res");
+
+            m.value = eval(n);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+    .ac{
+        background-color: aqua;
+    }
+</style>
+<!-- 제이쿼리 라이브러리 연동 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function on(){
+        $("#aa").addClass("ac");
+    }
+    function on1(){
+        $("#aa").removeClass("ac");
+    }
+    function on2(){
+        $("#aa").toggleClass("ac");
+    }
+</script>
+</head>
+<body>
+    <h1 id="aa">h1 태그</h1>
+    <button onclick="on()">css추가</button>
+    <button onclick="on1()">css제거</button>
+    <button onclick="on2()">css전환</button>
+</body>
+</html>

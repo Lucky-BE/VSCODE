@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+    div{
+        border: 2px solid black;
+        padding: 20px;
+    }
+</style>
+<!-- 제이쿼리 라이브러리 연동 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $("#a").children().css('border-color','red');
+        $('#a').children(".a1").css('border-width','5px');
+        $('#a').find(".a2").css("border-style","dotted"); // #a 의 하위요소 중 .a2 만 선택
+    });
+</script>
+</head>
+<body>
+    <div id="a">
+        div one
+        <div class="a1">
+            div two
+            <div>
+                div three
+            </div>
+        </div> 
+        <div class="a2">
+            div four
+            <div>
+                five
+            </div>
+        </div>
+    </div>
+</body>
+</html>

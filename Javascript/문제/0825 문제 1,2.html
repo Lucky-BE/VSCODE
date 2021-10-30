@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 1번 
+        function gugu(){
+            var n=prompt("단 수 입력(1~9)");
+            n=parseInt(n);
+            for(var i=1;i<=9;i++){
+                document.write(n + "X" + i + "=" + (n*i) + "<br>");
+            }
+        }
+        gugu();
+    </script>
+</head>
+<body>
+    
+    <script>
+        // 2번
+        var food=["라면","초밥","가츠동","사케동"];
+        document.write("<ul>");
+        for(var i=0; i<food.length; i++){
+            document.write("<li>"+food[i]+"</li>");
+        }
+        document.write("</ul>");
+    </script>
+</body>
+</html>

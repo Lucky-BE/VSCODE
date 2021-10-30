@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .list_right{
+            list-style-type: none;
+            float: right;
+            margin-left: 10px;
+        }
+        .dd{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+   <div>
+      <ul>
+         <li class="list_right"><b><a href="<%=conpath %>/ProductList.jsp">상품목록</a></b></li>
+         <li class="list_right"><b><a href="<%=conpath %>/cart/CartList.jsp">장바구니</a></b></li>
+         <li class="list_right"><b><a href="<%=conpath %>/OrderList.jsp">주문목록</a></b></li>
+      </ul>
+   </div>
+  
+<br><br><br>
+<table>
+   <div align="left">
+      <a href=http://google.com>
+         <img src="https://res.cloudinary.com/demo/image/fetch/w_0.5,f_webp,q_70,b_white/https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+      </a>
+   </div>
+<br>
+
+   
+   <!-- 검색창 -->
+   <div style="background-color: yellowgreen;" align="center">
+      <form action="http://naver.com" method="post" float:left; width: 33%; >
+        <a href="https://www.naver.com"><img style="margin-top: 10px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgCAYAAABgrToAAAAAAXNSR0IArs4c6QAAAExJREFUWAnt1sEJACAMA0DrJt1/SAVXyKfI9V8Il0+qu88afHtwthdNwOkNyUeAAAECvwuUNRNWbM2EgN4JECBAgEAoYM2EgMuaSQUv1d0EPE4sEMMAAAAASUVORK5CYII=" align="left" width="25" height="25"></a>
+        <div style="display: inline-block; border: 1px solid black; width: fit-content; padding:10px">      
+            <input type="text" name="Search" style="width:300px;height:20px;font-size:15px;"/>
+            <input type="image" src="https://w7.pngwing.com/pngs/242/281/png-transparent-computer-icons-magnifier-symbol-magnifying-glass-magnifying-miscellaneous-logo-zooming-user-interface.png"
+            align="center" width="20" height="20" title="검색" alt="검색버튼" class="search_box_btn"/>
+          </div>   
+          <a style="float: right; margin-top: 15px;" href ="경매등록.jsp" ">경매등록</a>
+      </form>
+   </div>
+   
+   <!-- 경매등록페이지 링크 연동 -->
+   <div style="background-color: yellow;">
+      
+   </div>
+</table>
+<Br>
+</body>
+</html>
