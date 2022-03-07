@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <ol>
+            <li>
+                <p>1번</p>
+            </li>
+            <li>
+                <p>2번</p>
+            </li>
+            <li>
+                <p>3번</p>
+            </li>
+            <li>
+                <p>4번</p>
+            </li>
+            <li>
+                <p>5번</p>
+            </li>
+            <li>
+                <p>6번</p>
+            </li>
+        </ol>
+
+        <script>
+            let lis = document.getElementsByTagName("li");
+            for (var name in lis) {
+                lis[name].style.color = "red";
+                console.log(name);
+            }
+        </script>
+    </body>
+</html>
